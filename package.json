@@ -1,0 +1,22 @@
+{
+  "name": "koda-exam",
+  "version": "1.0.0",
+  "description": "landing static page for koda-exam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlaaAbusafia/koda-exam.git"
+  },
+  "author": "Alaa Abusafia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlaaAbusafia/koda-exam/issues"
+  },
+  "homepage": "https://github.com/AlaaAbusafia/koda-exam#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
