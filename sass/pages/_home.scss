@@ -1,0 +1,10 @@
+.section-about {
+    background-color: $color-white;
+    padding: 10rem 0;
+    height: 80vh;
+
+    @include respond(tab-port) {
+        padding: 20rem 0;
+    }
+}
+

@@ -4,7 +4,6 @@
   "description": "landing static page for koda-exam",
   "main": "index.js",
   "scripts": {
-    
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",

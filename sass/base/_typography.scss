@@ -1,0 +1,15 @@
+.heading-tertiary {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-left: $gutter-horizontal *2;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    color: $color-grey-light;
+    
+
+   // &:not(:last-child) {
+        margin-bottom: 3rem;
+   // }
+}
