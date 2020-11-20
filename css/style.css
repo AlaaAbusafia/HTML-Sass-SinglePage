@@ -22,8 +22,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding: 0;
   box-sizing: border-box; }
 
-li {
-  list-style: none; }
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
 
 html {
   font-size: 62.5%; }
@@ -192,46 +194,36 @@ body {
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
-.navbar {
-  position: absolute;
-  top: 3.5rem;
-  right: 1rem;
-  width: 60%; }
-  @media only screen and (max-width: 37.5em) {
-    .navbar {
-      width: 100%;
-      font-family: 5rem; } }
-  .navbar__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; }
-  .navbar__item {
-    margin: 1rem 2rem;
-    list-style-type: none; }
-  .navbar__link:link, .navbar__link:visited {
-    display: inline-block;
-    font-size: 2rem;
-    color: #fff;
-    text-decoration: none; }
-  .navbar__link:hover, .navbar__link:active {
-    border-bottom: 0.2rem solid #fff; }
-
 .header {
   height: 100vh;
   background-image: url(../../_assets/banner1.jpg);
   background-size: cover;
   background-position: top;
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 2rem;
-    left: 2rem; }
+  animation: 1s fadein 0.5s forwards;
+  opacity: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+
+@keyframes fadein {
+  100% {
+    opacity: 1; } }
   .header__text-box {
     position: absolute;
     top: 40%;
     left: 40%;
     transform: translate(-30%, -20%);
-    text-align: center; }
+    text-align: center;
+    opacity: 0;
+    margin-top: 15rem;
+    animation: 1s slidefade 1s forwards; }
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0; } }
 
 .heading-primary {
   color: #fff;
@@ -257,16 +249,76 @@ body {
       .heading-primary--sub {
         letter-spacing: .5rem; } }
 
+.topnav {
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /* Style the links inside the navigation bar */ }
+  .topnav__logo-box {
+    padding: 0 1rem; }
+    @media only screen and (max-width: 75em) {
+      .topnav__logo-box:a {
+        text-align: center; } }
+  .topnav__navbar {
+    /* Hide the links in the menu on small screens */ }
+    @media only screen and (max-width: 56.25em) {
+      .topnav__navbar {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10rem; } }
+  .topnav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .topnav__list {
+        padding: .2rem 0;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        position: absolute;
+        left: 0;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        width: 100%;
+        overflow: auto; } }
+  .topnav__item {
+    margin: 0 1rem;
+    list-style-type: none; }
+    @media only screen and (max-width: 37.5em) {
+      .topnav__item {
+        margin: 0; } }
+  .topnav__link {
+    /* Change the color of links on hover */
+    /* Add an active class to highlight the current page */ }
+    .topnav__link:link, .topnav__link:visited {
+      text-decoration: none;
+      text-transform: capitalize;
+      color: #fff;
+      font-size: 2rem;
+      display: block;
+      cursor: pointer;
+      /*  links in the menu on small screens */ }
+      @media only screen and (max-width: 37.5em) {
+        .topnav__link:link, .topnav__link:visited {
+          font-size: 1.6rem; } }
+    .topnav__link:hover, .topnav__link:active {
+      border-bottom: 0.25rem solid #fff; }
+
 .footer {
   background-color: #fff;
   border-top: .2rem solid transparent;
   padding: .3rem;
   border-image-source: linear-gradient(to right, #afafaf 0%, #fff 100%);
   border-image-slice: 1;
-  /* Shorthand */
-  /* border-image: 
-        linear-gradient(to right, red 0%, blue 100%) 1;
-    */
   padding: 2.5rem 0;
   font-size: 1.4rem;
   color: #afafaf; }

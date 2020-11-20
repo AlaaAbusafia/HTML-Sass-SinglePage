@@ -17,11 +17,70 @@
     
     border-image-source: linear-gradient(to right, $color-grey-light 0%, $color-white 100%); 
     border-image-slice: 1;
-    /* Shorthand */
-    /* border-image: 
-        linear-gradient(to right, red 0%, blue 100%) 1;
-    */
 }
+
+@mixin flex-browsers{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+@mixin justify-browsers{
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@mixin evenly-content{
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+}
+
+@mixin flex-zero{
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+}
+
+@mixin flex-one{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+@mixin display-flex-browsers{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-direction-column{
+    -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+@mixin flex-wrap-wrap{
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin flex-nowrap{
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+
+@mixin center-align-items{
+    -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+    
+
+
 
 
 // MEDIA QUERY MANAGER
