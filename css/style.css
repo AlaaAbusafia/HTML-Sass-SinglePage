@@ -67,6 +67,14 @@ body {
   font-size: 4.5rem;
   font-weight: 400;
   margin-left: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-tertiary {
+      font-size: 4rem;
+      margin-left: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 3rem;
+      margin-left: 0; } }
 
 .paragraph {
   font-size: 1.6rem;

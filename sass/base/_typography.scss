@@ -18,6 +18,17 @@
     font-size: 4.5rem;
     font-weight: 400;
     margin-left: $gutter-horizontal;
+
+     @include respond(tab-port) {
+        font-size: 4rem;
+        margin-left: 0;
+    }
+
+    @include respond(phone) {
+        font-size: 3rem;
+        margin-left: 0;
+    
+    }
 }
 
 .paragraph {
