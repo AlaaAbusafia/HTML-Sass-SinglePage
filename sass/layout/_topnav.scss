@@ -4,7 +4,9 @@
     @include center-align-items;
     @include justify-browsers;
 
-    &__logo-box {
+    &__navbar {
+
+        &-brand{
        
         padding: 0 1rem;
 
@@ -18,8 +20,6 @@
         }
 
     }
-
-    &__navbar {
     
 
     /* Hide the links in the menu on small screens */

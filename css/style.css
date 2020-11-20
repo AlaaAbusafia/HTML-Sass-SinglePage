@@ -27,21 +27,10 @@ ul, li {
   margin: 0;
   padding: 0; }
 
-html {
-  font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
-  @media only screen and (max-width: 56.25em) {
-    html {
-      font-size: 50%; } }
-  @media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 75%; } }
-
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-weight: 400;
+  font-size: 1rem;
   line-height: 1.7;
   color: #333;
   background-color: #fff; }
@@ -232,7 +221,7 @@ body {
   margin-bottom: 6rem; }
   .heading-primary--main {
     display: block;
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 400;
     /*
         animation-delay: 3s;
@@ -240,7 +229,7 @@ body {
         */ }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
-        font-family: 5rem; } }
+        font-family: 3rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -249,68 +238,19 @@ body {
       .heading-primary--sub {
         letter-spacing: .5rem; } }
 
-.topnav {
-  height: 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.nav {
   /* Style the links inside the navigation bar */ }
-  .topnav__logo-box {
-    padding: 0 1rem; }
-    @media only screen and (max-width: 75em) {
-      .topnav__logo-box:a {
-        text-align: center; } }
-  .topnav__navbar {
-    /* Hide the links in the menu on small screens */ }
-    @media only screen and (max-width: 56.25em) {
-      .topnav__navbar {
-        display: inline-block;
-        width: 100%;
-        margin-top: 10rem; } }
-  .topnav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 1rem; }
-    @media only screen and (max-width: 56.25em) {
-      .topnav__list {
-        padding: .2rem 0;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        position: absolute;
-        left: 0;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-evenly;
-        width: 100%;
-        overflow: auto; } }
-  .topnav__item {
+  .nav-item {
+    margin: 0 2rem; }
+  .nav-link {
+    padding: 0;
     margin: 0 1rem;
-    list-style-type: none; }
-    @media only screen and (max-width: 37.5em) {
-      .topnav__item {
-        margin: 0; } }
-  .topnav__link {
     /* Change the color of links on hover */
     /* Add an active class to highlight the current page */ }
-    .topnav__link:link, .topnav__link:visited {
-      text-decoration: none;
-      text-transform: capitalize;
-      color: #fff;
-      font-size: 2rem;
-      display: block;
-      cursor: pointer;
-      /*  links in the menu on small screens */ }
-      @media only screen and (max-width: 37.5em) {
-        .topnav__link:link, .topnav__link:visited {
-          font-size: 1.6rem; } }
-    .topnav__link:hover, .topnav__link:active {
+    @media only screen and (max-width: 56.25em) {
+      .nav-link {
+        padding: 0; } }
+    .nav-link:hover, .nav-link:active {
       border-bottom: 0.25rem solid #fff; }
 
 .footer {
@@ -343,6 +283,10 @@ body {
     @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         display: block; } }
+
+.container-fluid {
+  margin: 0;
+  padding: 0; }
 
 .section-about {
   background-color: #fff;

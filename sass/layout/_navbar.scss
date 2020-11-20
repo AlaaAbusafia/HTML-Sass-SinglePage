@@ -1,0 +1,26 @@
+
+  .nav{
+
+    &-item{
+        margin: 0 2rem;
+    }
+    
+    /* Style the links inside the navigation bar */
+    &-link {
+        
+        padding: 0;
+        margin: 0 1rem;
+        @include respond(tab-port){
+            padding: 0;
+        }
+
+        /* Change the color of links on hover */
+        /* Add an active class to highlight the current page */
+        &:hover,
+        &:active {
+            border-bottom: .25rem solid $color-white;
+        }
+    }
+  }
+
+

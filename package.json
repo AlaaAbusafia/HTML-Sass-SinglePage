@@ -4,7 +4,6 @@
   "description": "landing static page for koda-exam",
   "main": "index.js",
   "scripts": {
-
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
@@ -37,7 +36,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1",
+    "jquery": "^3.3.1",
     "popper.js": "^1.16.1"
   }
 }
