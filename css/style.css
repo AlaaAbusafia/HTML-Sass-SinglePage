@@ -49,16 +49,29 @@ body {
 
 ::selection {
   background-color: #fff;
-  color: #7D7D7D; }
+  color: #afafaf; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
 
 .heading-tertiary {
   font-size: 4.5rem;
   font-weight: 400;
-  margin-left: 12rem; }
+  margin-left: 6rem; }
 
 .paragraph {
   font-size: 1.6rem;
-  color: #7D7D7D;
+  color: #afafaf;
+  font-weight: 300;
   margin-bottom: 3rem; }
 
 .btn, .btn:link, .btn:visited {
@@ -149,10 +162,12 @@ body {
     clear: both; }
   .row [class^="col-"] {
     float: left; }
-    @media only screen and (max-width: 56.25em) {
-      .row [class^="col-"]:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 6rem; } }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 3rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
     @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
@@ -234,10 +249,48 @@ body {
       .heading-primary--sub {
         letter-spacing: .5rem; } }
 
+.footer {
+  background-color: #fff;
+  border-top: .2rem solid transparent;
+  padding: .3rem;
+  border-image-source: linear-gradient(to right, #afafaf 0%, #fff 100%);
+  border-image-slice: 1;
+  /* Shorthand */
+  /* border-image: 
+        linear-gradient(to right, red 0%, blue 100%) 1;
+    */
+  padding: 2.5rem 0;
+  font-size: 1.4rem;
+  color: #afafaf; }
+  @media only screen and (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
+  .footer__nav {
+    display: inline-block;
+    margin-left: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__nav {
+        width: 100%;
+        text-align: center; } }
+  .footer__list {
+    list-style: none;
+    margin: 0 1rem; }
+  .footer__item {
+    display: inline-block;
+    opacity: 0.5; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__copyright {
+    display: inline; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
+
 .section-about {
   background-color: #fff;
-  padding: 10rem 0;
-  height: 80vh; }
+  padding: 10rem;
+  height: 50vh; }
   @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0; } }

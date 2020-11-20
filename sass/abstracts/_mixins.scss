@@ -13,6 +13,16 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin border-gradient {
+    
+    border-image-source: linear-gradient(to right, $color-grey-light 0%, $color-white 100%); 
+    border-image-slice: 1;
+    /* Shorthand */
+    /* border-image: 
+        linear-gradient(to right, red 0%, blue 100%) 1;
+    */
+}
+
 
 // MEDIA QUERY MANAGER
 /*
