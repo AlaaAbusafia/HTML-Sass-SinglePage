@@ -6,12 +6,31 @@
  * and follow the linear and lightweight appearance of the icon set.
  */
  
-.icon {
+
+.social {
+  @include display-flex;
+  @include flex-direction-row;
+  @include flex-wrap-wrap;
+  @include justify-space-between;
+  @include align-items-center;
   
 
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+
+    /* Font Awesome icons */
+    &__i {
+      font-size: .8em;
+      line-height: 1em;
+      background: $color-white;
+      border-radius: 50%;
+      border: .1rem solid $color-primary;
+      padding: .1rem;
+      margin: 0 .2rem;
+      color: $color-primary;
+      
+      &:hover, &:focus {
+      background: $color-primary;;
+      color: #fff;
+    }
+ }
 }
+

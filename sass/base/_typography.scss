@@ -16,7 +16,7 @@
         font-weight: 400;
         
         @include respond(phone) { 
-            font-family: 3rem;
+            font-size: 1.8rem;
         }
         /*
         animation-delay: 3s;
@@ -25,12 +25,12 @@
     }
     
     &--sub {
+        margin-top: 1.5rem;
         display: block;
         font-size: 2rem;
         font-weight: 300;
-
-        @include respond(phone) {
-            letter-spacing: .5rem;
+        @include respond(phone) { 
+            font-size: 1rem;
         }
     }
 }
@@ -57,11 +57,11 @@
 .heading-tertiary {
     font-size: 4.5rem;
     font-weight: 400;
-    margin-left: $gutter-horizontal;
+    
 
     @include respond(phone) {
         font-size: 3rem;
-        margin: 5rem 0 0 0;
+        margin-top: 5rem
     }
 }
 

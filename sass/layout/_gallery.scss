@@ -4,7 +4,12 @@
  * 
  *
  */
-
+.gallery{
+    @include respond(big-desktop){
+        width: 120rem;
+        margin: auto;
+    }
+}
 .overlay-item {
        display: block;
        position: relative;
@@ -12,12 +17,14 @@
        text-align: center;
        max-height: 23rem;
 
+
        &:img {
             display: block;
             width: 100%;
             height: auto;
             margin-right: auto;
             margin-left: auto;
+            
         } 
    
 }

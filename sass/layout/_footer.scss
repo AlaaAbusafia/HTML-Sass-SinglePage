@@ -21,7 +21,7 @@
 
     &__links {
         display: inline-block;
-        opacity: 0.5;
+        opacity: 0.8;
     
     
     }
@@ -31,15 +31,23 @@
     &__copyright {
         display: inline;
         margin-right: 3rem;
-        @include respond(tab-port) {
-            display: block;
-        }
     }
 }
 
 .footer-content{
     padding: .3rem 10rem;
+
+    @include respond(phone) {
+        padding:  0;
+    }
 }
 .footer-link{
             color: $color-text-link;
+}
+
+.align-el{
+    text-align: right;
+     @include respond(phone) {
+        text-align: center;
+    }
 }

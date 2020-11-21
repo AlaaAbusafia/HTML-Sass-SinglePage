@@ -1,0 +1,74 @@
+.cards {
+    display: flex;
+    @include flex-wrap-wrap;
+    width: 82vw;
+    margin: 4rem auto;
+   justify-content: space-between;
+
+   
+}
+ 
+.card {
+   
+    @include flex-one;
+    
+    justify-content: center;;
+    box-sizing: border-box;
+    margin: 1.5rem;
+    border: none;
+
+    @include respond(tab-port){
+       flex: 1 0 40%;
+   }
+
+    &__img{
+        margin: 1rem;
+        border-radius: 50%;
+        border: 1px solid $color-grey-dark;
+        background-color: $color-white;
+        padding: .5rem;
+
+        &:hover{
+            @include transition-all-easeInOut;
+            background-color: $color-grey-dark;
+        }
+
+       
+       
+       
+   }
+
+    &__name{
+        color: $color-grey-dark;
+        &:hover{
+            border-bottom: .1rem solid $color-grey-dark;
+        }
+    }
+    &__work{
+        color: $color-grey-light;
+        font-size: 1.2rem;
+    }
+
+    &__about{
+        color: $color-grey-light;
+        margin: 1rem 0;
+        font-size: 1rem;
+    }
+}
+
+.name-social{
+    @include display-flex;
+    @include flex-direction-row;
+    @include flex-wrap-wrap;
+    @include justify-space-between;
+}
+.more-link{
+    color: $color-primary;
+
+    
+}
+.more-link i{
+ 
+        font-size: .8rem
+    
+}

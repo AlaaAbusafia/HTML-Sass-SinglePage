@@ -15,7 +15,7 @@
     
     
     @include respond(phone){
-        @include justify-browsers;
+        @include justify-space-between;
     }
 
     @keyframes fadein {
@@ -27,12 +27,11 @@
     
     &__text-box {
         position: absolute;
-        top: 40%;
-        left: 40%;
-        transform: translate(-30%, -20%);
+        
+        @include absCenter;
         text-align: center;
         opacity: 0;
-        margin-top: 15rem;
+        
         animation: 1s slidefade 1s forwards ;
 
         @keyframes slidefade {
@@ -42,6 +41,8 @@
             }
             
         }
+
+
         
     }
 }
