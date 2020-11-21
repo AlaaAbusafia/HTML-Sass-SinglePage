@@ -1,39 +1,29 @@
+/**
+ * _footer.scss
+ *
+ * Add css for the footer section
+ */
+
 .footer {
     background-color: $color-white;
     border-top: .2rem solid transparent;
-    padding: .3rem;
+    margin-top: 10rem;
     @include border-gradient;
     padding: 2.5rem 0;
-    font-size: 1.4rem;
+    font-size: .8rem;
     color: $color-grey-light;
     
 
     @include respond(tab-port) {
         padding: 8rem 0;
     }
+    
 
-
-    &__nav{
-        
-        display: inline-block;
-        
-        @include respond(tab-port) {
-            display: block;
-        }
-    }
-
-    &__list {
-        list-style: none;
-        
-        
-    }
-
-    &__item {
+    &__links {
         display: inline-block;
         opacity: 0.5;
-        &:not(:last-child) {
-            margin-right: 1.5rem;
-        }
+    
+    
     }
 
 
@@ -45,4 +35,11 @@
             display: block;
         }
     }
+}
+
+.footer-content{
+    padding: .3rem 10rem;
+}
+.footer-link{
+            color: $color-text-link;
 }

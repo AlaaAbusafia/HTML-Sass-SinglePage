@@ -1,0 +1,70 @@
+
+/**
+ * _gallery.scss --> Hover Overlay text Effect
+ * 
+ *
+ */
+
+.overlay-item {
+       display: block;
+       position: relative;
+       overflow: hidden;
+       text-align: center;
+       max-height: 23rem;
+
+       &:img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+        } 
+   
+}
+
+.overlay-item .mask {
+       display: block;
+       padding: 5rem;
+       position: absolute;
+       overflow: hidden;
+       top: 0;
+       left: 0;
+       height: 100%;
+       color: $color-white;
+        text-align: left;
+
+        &__date{
+        opacity: .5;
+        display: block;
+    }
+}
+    
+.overlay-effect img {
+    @include transform-scaleY-one;
+    @include transition-all-easeInOut;
+}
+    .overlay-effect .mask {
+       background-color: rgb(223,97,74);
+       @include transition-all-linear;
+       @include transparent;
+
+       &__details{
+           @include transparent;
+            @include transform-scale-zero;
+           @include transition-all-linear;
+        }
+    }
+    
+    /*.overlay-effect:hover img {
+       @include transform-scale-ten;
+       @include transparent;
+    }*/
+
+
+    .overlay-effect:hover .mask {
+       @include not-transparent;
+    }
+    .overlay-effect:hover h3,.overlay-effect:hover p,.overlay-effect:hover a.btn {
+       @include transform-scale-one;
+       @include not-transparent;
+    }

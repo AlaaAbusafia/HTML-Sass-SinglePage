@@ -1,3 +1,42 @@
+/**
+ * _typography.scss --> change the typography of html elements
+ * 
+ *
+ */
+
+.heading-primary {
+    color: $color-white;
+    text-transform: capitalize;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 4.5rem;
+        font-weight: 400;
+        
+        @include respond(phone) { 
+            font-family: 3rem;
+        }
+        /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 300;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+
+
 .heading-secondary {
     font-size: 3.5rem;
     font-weight: 400;
@@ -14,20 +53,15 @@
     
     }
 }
+
 .heading-tertiary {
     font-size: 4.5rem;
     font-weight: 400;
     margin-left: $gutter-horizontal;
 
-     @include respond(tab-port) {
-        font-size: 4rem;
-        margin-left: 0;
-    }
-
     @include respond(phone) {
         font-size: 3rem;
-        margin-left: 0;
-    
+        margin: 5rem 0 0 0;
     }
 }
 
@@ -35,8 +69,7 @@
     font-size: $default-font-size;
     color: $color-grey-light;
     font-weight: 300;
-
-   // &:not(:last-child) {
-        margin-bottom: 3rem;
-   // }
+}
+.align-right{
+    text-align: right;
 }

@@ -1,15 +1,22 @@
 
-.container-fluid {
-    margin: 0;
-    padding: 0;
-}
+
+ /**
+ * _home.scss
+ *
+ * Add css to home page sections
+ */
+
 .section-about {
     background-color: $color-white;
     padding: 10rem;
-    height: 50vh;
 
-    @include respond(tab-port) {
-        padding: 20rem 0;
+
+    @include respond(phone) {
+        padding: 5rem;
     }
+}
+
+.paragraph {
+    margin-bottom: 3rem;
 }
 

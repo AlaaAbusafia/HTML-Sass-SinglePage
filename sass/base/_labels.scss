@@ -1,15 +1,24 @@
+/**
+ * _labels.scss --> bootstrap-custom Labels
+ * 
+ * Overwrites the default styles defined by the bootstrap framework.
+ *
+ */
 
-  .nav{
+ .container-fluid {
+    margin: 0;
+    padding: 0;
+}
 
+
+.nav{
     &-item{
-        margin: 0 2rem;
+        margin: 0 1rem;
     }
     
     /* Style the links inside the navigation bar */
-    &-link {
-        
+    &-link { 
         padding: 0;
-        margin: 0 1rem;
         @include respond(tab-port){
             padding: 0;
         }
@@ -18,9 +27,7 @@
         /* Add an active class to highlight the current page */
         &:hover,
         &:active {
-            border-bottom: .25rem solid $color-white;
+             border-bottom: .2rem solid $color-white;
         }
     }
   }
-
-
