@@ -1,9 +1,10 @@
 .cards {
+    
     display: flex;
     @include flex-wrap-wrap;
     width: 82vw;
     margin: 4rem auto;
-   justify-content: space-between;
+   @include justify-space-between;
 
    
 }
@@ -12,9 +13,9 @@
    
     @include flex-one;
     
-    justify-content: center;;
+    justify-content: center;
     box-sizing: border-box;
-    margin: 1.5rem;
+    margin: 1.8rem;
     border: none;
 
     @include respond(tab-port){
@@ -22,7 +23,8 @@
    }
 
     &__img{
-        margin: 1rem;
+        width: 100%;
+        margin: 1rem auto;
         border-radius: 50%;
         border: 1px solid $color-grey-dark;
         background-color: $color-white;
@@ -31,6 +33,10 @@
         &:hover{
             @include transition-all-easeInOut;
             background-color: $color-grey-dark;
+        }
+
+        @include respond(tab-port){
+            width: 70%;
         }
 
        
