@@ -27,6 +27,8 @@ Project Root
         ├── footer            // style for the footer section
         ├── gallery          // style for the gallery sections
         ├── cards            // style for cards section
+        ├── categories       // style the categories section
+        ├── navbar            // Adding special effect style for the navbar when it respond to mobile  
     
     └── pages
         ├── home            // style for the main page

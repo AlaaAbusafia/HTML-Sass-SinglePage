@@ -8,8 +8,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,47 +33,56 @@
 
 <!--Body-->
 <body class="container-fluid">
-
+    
     <!--Header Content-->
     <header class="header">
-       
+   
         <!-- Responsive Bootstrap navbar with logo -->
-        <nav class="navbar navbar-expand-lg navbar-dark static-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-faded">
+                
+            <!-- LOGO -->
+            <a class="navbar-brand" href="https://www.kodaweb.co.nz/">
+                <img src="_assets/logo.png" alt="Kod Web Logo">
+            </a>
+
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             
-                <a class="navbar-brand" href="https://www.kodaweb.co.nz/">
-                    <img src="_assets/logo.png" alt="Kod Web Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link navbar__link" href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Our Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Careers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse nav-bg-respond" id="navbarResponsive">
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-link-style" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-style" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-style" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-style" href="#">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-style" href="#">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-style" href="#">Contact</a>
+                    </li>
+                </ul>
+                <!-- Links -->
+            </div>
+            <!-- Collapsible content -->
             
         </nav>
-        <!-- /Navigation -->
+        <!--/.Navbar-->
+  
         
         <!--Header text box-->
         <div class="header__text-box">
@@ -105,38 +126,38 @@
 
 
     <!--Products blocks With Hover Effect Transition-->
-        <section class="products">
-            <div class="products__block bg-grey row no-gutters">
+        <section class="categories">
+            <div class="categories__block bg-grey row no-gutters">
                 <div class="col-sm-1 bg-grey-light"></div>
                 <div class="p-container col-sm-11 p-container--grey">
                     <p class="bg-grey-light">Lorem ipsum dolor sit</p>
                 </div>
             </div>
-            <div class="products__block bg-red row no-gutters">
+            <div class="categories__block bg-red row no-gutters">
                 <div class="col-sm-1 bg-red-dark"></div>
                 <div class="p-container col-sm-11 p-container--red">
                     <p class="bg-red-dark">Lorem ipsum dolor sit amet</p>
                 </div>
             </div>
-            <div class="products__block bg-bright-green row no-gutters">
+            <div class="categories__block bg-bright-green row no-gutters">
                 <div class="col-sm-1 bg-brightgreen-dark"></div>
                 <div class="p-container col-sm-11 p-container--brightgreen">
                     <p class="bg-brightgreen-dark">Lorem ipsum dolor sit amet sit</p>
                 </div>
             </div>
-            <div class="products__block bg-blue row no-gutters">
+            <div class="categories__block bg-blue row no-gutters">
                 <div class="col-sm-1 bg-blue-dark"></div>
                 <div class="p-container col-sm-11 p-container--blue">
                     <p class="bg-blue-dark">Lorem ipsum dolor sit amet sit amet</p>
                 </div>
             </div>
-            <div class=" products__block bg-green row no-gutters">
+            <div class="categories__block bg-green row no-gutters">
                 <div class="col-sm-1 bg-green-dark"></div>
                 <div class="p-container col-sm-11 p-container--green">
                     <p class="bg-green-dark">Lorem ipsum dolor sit amet sit ametsitd</p>
                 </div>
             </div>
-            <div class="products__block bg-gold row no-gutters">
+            <div class="categories__block bg-gold row no-gutters">
                 <div class="col-sm-1 bg-gold-dark"></div>
                 <div class="p-container col-sm-11 p-container--gold">
                     <p class="bg-gold-dark">Lorem ipsum dolor sit amet ametsit ametsit</p>
