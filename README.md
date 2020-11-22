@@ -11,25 +11,27 @@ Project Root
         ├── variables        // Variables used in the custom theme
         ├── mixins           // the most used multiple inheritance
 
-    ├── base                // Base styles. Styles placed here should be available anywhere in the application
-        ├── base            // Demos to illustrate styles and interactions for the style guide
-        ├── labels          // Custom styles that overwrite bootstrap
+    ├── base                // **Base styles. Styles placed here should be available anywhere in the application**
+        ├── base            // styles for the whole page can be affect all styles
+        ├── labels          // custom styles that overwrite bootstrap
         ├── typography      // the properties related to fonts
      
     └── components
         ├── button          // Custom style for the buttons
-        ├── icons          // Custom style for the icons
+        ├── icons           // custom style for the social icons
+        ├── colored-blocks  // each block has its own background color and 
+                            // when hover the background color slides to cover the whole block
     
     └── layout
         ├── header            // style for the header section
         ├── footer            // style for the footer section
         ├── gallery          // style for the gallery sections
-        ├── team            // style for team section
+        ├── cards            // style for cards section
     
     └── pages
-        ├── home            // style for the main 
+        ├── home            // style for the main page
         
-    └── main.scss      // Imports of all the base stylesheets
+    └── main.scss      // Imports of all stylesheets
 
 └── index.html
 └── package.json

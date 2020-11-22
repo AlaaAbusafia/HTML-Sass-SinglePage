@@ -1,0 +1,91 @@
+
+/*
+* colored-blocks with hover effect, 
+* each block has its own background color and 
+* when hover the background color slides to cover the whole block
+*
+**/
+
+.bg-grey{
+    background-color: $color-grey-light-2;
+}
+.bg-red{
+    background-color: $color-red-light;
+}
+.bg-bright-green{
+    background-color: $color-brightgreen-light;
+}
+
+.bg-blue{
+    background-color: $color-blue-light;
+}
+.bg-green{
+    background-color: $color-green-light;
+}
+.bg-gold{
+    background-color: $color-gold-light;
+}
+
+.bg-grey-light{
+    background-color: $color-grey-light;
+}
+.bg-red-dark{
+    background-color: $color-red-dark;
+}
+.bg-brightgreen-dark{
+    background-color: $color-brightgreen-dark;
+}
+.bg-blue-dark{
+    background-color: $color-blue-dark;
+}
+.bg-green-dark{
+    background-color: $color-green-dark;
+}
+.bg-gold-dark{
+    background-color: $color-gold-dark;
+}
+
+.p-container{
+    display: flex;
+    align-content: flex-start;
+    justify-items: flex-end;
+    margin: auto;
+
+   &--grey{
+        background: linear-gradient(to right, $color-grey-light 30%, $color-grey-light-2 70%);
+        @include bg-size-position;
+        @include transition-all-easeInOut;
+    }
+
+    &--red{
+        background: linear-gradient(to right, $color-red-dark 30%, $color-red-light 70%);
+        @include bg-size-position;
+        @include transition-all-easeInOut;
+    }
+    &--green{
+        background: linear-gradient(to right, $color-green-dark 30%, $color-green-light 70%);
+        @include bg-size-position;
+        @include transition-all-easeInOut;
+    }
+    &--brightgreen{
+        background: linear-gradient(to right, $color-brightgreen-dark 30%, $color-brightgreen-light 70%);
+        @include bg-size-position;
+        @include transition-all-easeInOut;
+    }
+    &--blue{
+        background: linear-gradient(to right, $color-blue-dark 30%, $color-blue-light 70%);
+        @include bg-size-position;
+        @include transition-all-easeInOut;
+    }
+    &--gold{
+        background: linear-gradient(to right, $color-gold-dark 30%, $color-gold-light 70%);
+        @include bg-size-position;
+        @include transition-all-easeInOut;
+    }
+
+    &:hover{
+        /* "to left" / "to right" - affects initial color */
+        background-position: left bottom;
+    }
+}
+

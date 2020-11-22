@@ -194,7 +194,7 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
-.btn-text:i {
+.btn-text i {
   color: #D0922B; }
 
 /**
@@ -233,6 +233,109 @@ body {
     .social__i:hover, .social__i:focus {
       background: #619DE3;
       color: #fff; }
+
+/*
+* Background Colors 
+*
+**/
+.bg-grey {
+  background-color: #F9F9F9; }
+
+.bg-red {
+  background-color: #FBF0EE; }
+
+.bg-bright-green {
+  background-color: #FDF5F2; }
+
+.bg-blue {
+  background-color: #f7f7fe; }
+
+.bg-green {
+  background-color: #EDEDED; }
+
+.bg-gold {
+  background-color: #FCF5EB; }
+
+.bg-grey-light {
+  background-color: #afafaf; }
+
+.bg-red-dark {
+  background-color: #DF614A; }
+
+.bg-brightgreen-dark {
+  background-color: #B3D330; }
+
+.bg-blue-dark {
+  background-color: #2185E3; }
+
+.bg-green-dark {
+  background-color: #038072; }
+
+.bg-gold-dark {
+  background-color: #D0922B; }
+
+.p-container {
+  display: flex;
+  align-content: flex-start;
+  justify-items: flex-end;
+  margin: auto; }
+  .p-container--grey {
+    background: linear-gradient(to right, #afafaf 30%, #F9F9F9 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--red {
+    background: linear-gradient(to right, #DF614A 30%, #FBF0EE 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--green {
+    background: linear-gradient(to right, #038072 30%, #EDEDED 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--brightgreen {
+    background: linear-gradient(to right, #B3D330 30%, #FDF5F2 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--blue {
+    background: linear-gradient(to right, #2185E3 30%, #f7f7fe 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--gold {
+    background: linear-gradient(to right, #D0922B 30%, #FCF5EB 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container:hover {
+    /* "to left" / "to right" - affects initial color */
+    background-position: left bottom; }
 
 /**
  * _header.scss 
@@ -496,3 +599,19 @@ body {
 .sec-color {
   color: #D0922B;
   font-size: 1.2rem; }
+
+.products__block {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300; }
+  .products__block p {
+    display: inline;
+    padding: 1.5rem;
+    margin: 0;
+    text-align: left; }
+  @media only screen and (max-width: 56.25em) {
+    .products__block {
+      font-size: 1.6rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .products__block {
+      font-size: 1rem; } }
