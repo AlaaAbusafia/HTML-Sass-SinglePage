@@ -308,7 +308,7 @@ body {
   display: flex;
   align-content: flex-start;
   justify-items: flex-end;
-  margin: auto; }
+  margin: 0 auto; }
   .p-container--grey {
     background: linear-gradient(to right, #afafaf 30%, #F9F9F9 70%);
     background-size: 200% 100%;
@@ -468,6 +468,9 @@ body {
   grid-template: repeat(7, 5vw)/repeat(8, 1fr);
   grid-gap: 0rem;
   padding: 0rem; }
+  @media only screen and (max-width: 37.5em) {
+    .gallery {
+      display: block; } }
   .gallery__item {
     display: block;
     position: relative; }

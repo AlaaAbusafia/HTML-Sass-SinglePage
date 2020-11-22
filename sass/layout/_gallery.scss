@@ -17,6 +17,10 @@
     grid-gap: 0rem;
     padding: 0rem;
 
+    @include respond(phone){
+        display: block;
+    }
+
     &__item {
         display: block;
         position: relative;
