@@ -28,7 +28,7 @@ Project Root
     └── layout
         ├── header            // styles for the header section
         ├── navbar            // Adding special effect style for the navbar when it respond to mobile  
-        ├── categories       // styles the categories section with colored blocks and hover effect
+        ├── services          // styles the services section with colored blocks and hover effect
         ├── gallery          // styles for the gallery sections that shows some photoes 
                             //  and when hover some description appear
         ├── cards            // styles for cards section that shows the team member
