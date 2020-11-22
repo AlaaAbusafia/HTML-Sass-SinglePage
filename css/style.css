@@ -42,6 +42,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
       border-bottom: 0.2rem solid #fff;
       margin-top: -.2rem; }
 
+/*
+*
+* Base.scss 
+* All base properties that affect the whole page
+*/
 *,
 *::after,
 *::before {
@@ -49,7 +54,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding: 0;
   box-sizing: border-box; }
 
-ul, li {
+ul, li, figure, p {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -82,8 +87,8 @@ body {
       padding: 0; } }
 
 ::selection {
-  background-color: #fff;
-  color: #afafaf; }
+  background-color: #F9F9F9;
+  color: #333; }
 
 /**
  * _typography.scss --> change the typography of html elements
@@ -283,6 +288,9 @@ body {
   align-content: flex-start;
   justify-items: flex-end;
   margin: 0 auto; }
+  @media only screen and (max-width: 37.5em) {
+    .p-container {
+      margin: -.2rem auto 0 auto; } }
   .p-container--grey {
     background: linear-gradient(to right, #afafaf 30%, #F9F9F9 70%);
     background-size: 200% 100%;
@@ -422,9 +430,13 @@ body {
   font-weight: 300; }
   .categories__block p {
     display: inline;
-    padding: 1.5rem;
-    margin: 0;
+    padding: 1.5rem 2.8rem 1.5rem 0;
+    margin: 0 0 0 -1.8rem;
     text-align: left; }
+    @media only screen and (max-width: 61.9em) {
+      .categories__block p {
+        margin: 0;
+        padding: 1.5rem 2.5rem; } }
   @media only screen and (max-width: 61.9em) {
     .categories__block {
       font-size: 1.6rem; } }

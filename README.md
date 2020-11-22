@@ -1,6 +1,9 @@
 # koda-exam
-static single page that reproduces the design as a mobile ready page. 
-
+Static single page that reproduces the design as a mobile ready page. 
+The page has been built with HTML, HTML5, CSS,CSS3 and CSS preprocessor (Sass).
+And it extended with package manager.
+The Bootstrap framwork has been added with its dependencies like jquery and popper.
+ 
 
 Project Root
 └── assets
@@ -8,10 +11,10 @@ Project Root
     ├── style.css           //render the sass styeles into css 
 └── sass
     ├── abstracts                 
-        ├── variables        // Variables used in the custom theme
         ├── mixins           // the most used multiple inheritance
+        ├── variables        // Variables used in the custom theme
 
-    ├── base                // **Base styles. Styles placed here should be available anywhere in the application**
+    ├── base                // Styles placed here should be available anywhere in the application
         ├── base            // styles for the whole page can be affect all styles
         ├── labels          // custom styles that overwrite bootstrap
         ├── typography      // the properties related to fonts
@@ -23,15 +26,17 @@ Project Root
                             // when hover the background color slides to cover the whole block
     
     └── layout
-        ├── header            // style for the header section
-        ├── footer            // style for the footer section
-        ├── gallery          // style for the gallery sections
-        ├── cards            // style for cards section
-        ├── categories       // style the categories section
+        ├── header            // styles for the header section
         ├── navbar            // Adding special effect style for the navbar when it respond to mobile  
-    
+        ├── categories       // styles the categories section with colored blocks and hover effect
+        ├── gallery          // styles for the gallery sections that shows some photoes 
+                            //  and when hover some description appear
+        ├── cards            // styles for cards section that shows the team member
+        
+        ├── footer            // styles for the footer section
+
     └── pages
-        ├── home            // style for the main page
+        ├── home            // styles for the main page
         
     └── main.scss      // Imports of all stylesheets
 
