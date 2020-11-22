@@ -39,9 +39,9 @@
   .nav-link-style{
         @include respond(tab-port){
             line-height: 3rem;
-            padding: 3rem;
+            padding: 2rem;
             
-            font-size: 3rem;
+            font-size: 2rem;
         }
         
 }

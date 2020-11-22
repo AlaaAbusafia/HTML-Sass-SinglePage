@@ -47,5 +47,11 @@
     }
 }
 
+.koda-logo{
+    @include respond(phone){
+        width: 45vw;
+    }
+}
+
 
 

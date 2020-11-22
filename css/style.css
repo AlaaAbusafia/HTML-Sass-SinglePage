@@ -42,41 +42,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
       border-bottom: 0.2rem solid #fff;
       margin-top: -.2rem; }
 
-.navbar {
-  top: 0;
-  left: 0;
-  z-index: 1500; }
-
-.navbar button {
-  z-index: 1500; }
-
-.nav-bg-respond {
-  text-align: center; }
-  @media only screen and (max-width: 61.9em) {
-    .nav-bg-respond {
-      background-position: 100%;
-      color: #619DE3;
-      transform: translateX(1rem);
-      background-image: linear-gradient(to bottom right, #619DE3, #333) !important;
-      width: 100vw;
-      height: 100vh;
-      position: absolute !important;
-      top: 0;
-      right: 0;
-      background-size: 220%;
-      transition: all .4s;
-      color: #fff;
-      margin-top: 0rem;
-      font-size: 2rem;
-      color: #333;
-      padding-top: 10rem; } }
-
-@media only screen and (max-width: 61.9em) {
-  .nav-link-style {
-    line-height: 3rem;
-    padding: 3rem;
-    font-size: 3rem; } }
-
 *,
 *::after,
 *::before {
@@ -134,17 +99,26 @@ body {
     display: block;
     font-size: 4.2rem;
     font-weight: 400; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 2rem; } }
   .heading-primary--sub {
     margin-top: 1.5rem;
     display: block;
     font-size: 2.5rem;
     font-weight: 300; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1rem; } }
 
 .heading-secondary {
   font-size: 3.6rem;
   font-weight: 400;
   display: inline-block;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      margin-top: 4rem; } }
 
 .heading-tertiary {
   font-size: 2.5rem;
@@ -403,6 +377,10 @@ body {
     opacity: 1;
     margin: 0; } }
 
+@media only screen and (max-width: 37.5em) {
+  .koda-logo {
+    width: 45vw; } }
+
 .navbar {
   top: 0;
   left: 0;
@@ -435,8 +413,8 @@ body {
 @media only screen and (max-width: 61.9em) {
   .nav-link-style {
     line-height: 3rem;
-    padding: 3rem;
-    font-size: 3rem; } }
+    padding: 2rem;
+    font-size: 2rem; } }
 
 .categories__block {
   font-size: 2rem;
@@ -709,19 +687,3 @@ body {
 .sec-color {
   color: #D0922B;
   font-size: 1.2rem; }
-
-.products__block {
-  font-size: 2rem;
-  color: #fff;
-  font-weight: 300; }
-  .products__block p {
-    display: inline;
-    padding: 1.5rem;
-    margin: 0;
-    text-align: left; }
-  @media only screen and (max-width: 61.9em) {
-    .products__block {
-      font-size: 1.6rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .products__block {
-      font-size: 1rem; } }
