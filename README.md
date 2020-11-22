@@ -3,6 +3,10 @@ Static single page that reproduces the design as a mobile ready page.
 The page has been built with HTML, HTML5, CSS,CSS3 and CSS preprocessor (Sass).
 And it extended with package manager.
 The Bootstrap framwork has been added with its dependencies like jquery and popper.
+
+To launch the page:
+type --> npm install
+then --> npm start
  
 
 Project Root
