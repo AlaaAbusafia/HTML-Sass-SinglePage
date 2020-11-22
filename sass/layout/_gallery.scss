@@ -9,10 +9,6 @@
    
     grid-column: full-start / full-end;
 
-    @include respond(phone){
-        display: flex;
-    }
-
     display: grid;
     /*grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(7, 5vw);*/

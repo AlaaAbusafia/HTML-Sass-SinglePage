@@ -389,9 +389,6 @@ body {
   grid-template: repeat(7, 5vw)/repeat(8, 1fr);
   grid-gap: 0rem;
   padding: 0rem; }
-  @media only screen and (max-width: 37.5em) {
-    .gallery {
-      display: flex; } }
   .gallery__item {
     display: block;
     position: relative; }
