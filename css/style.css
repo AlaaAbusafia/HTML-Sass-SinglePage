@@ -26,6 +26,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding: 0; }
 
 .nav {
+  font-size: 1.6rem;
   /* Style the links inside the navigation bar */ }
   .nav-item {
     margin: 0 1rem; }
@@ -37,7 +38,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
       .nav-link {
         padding: 0; } }
     .nav-link:hover, .nav-link:active {
-      border-bottom: 0.2rem solid #fff; }
+      border-bottom: 0.2rem solid #fff;
+      margin-top: -.2rem; }
 
 *,
 *::after,
@@ -51,10 +53,26 @@ ul, li {
   margin: 0;
   padding: 0; }
 
+.clearfix {
+  *zoom: 1; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
 body {
+  box-sizing: border-box;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #333;
   background-color: #fff; }
@@ -78,43 +96,23 @@ body {
   margin-bottom: 6rem; }
   .heading-primary--main {
     display: block;
-    font-size: 3.6rem;
-    font-weight: 400;
-    /*
-        animation-delay: 3s;
-        animation-iteration-count: 3;
-        */ }
-    @media only screen and (max-width: 37.5em) {
-      .heading-primary--main {
-        font-size: 1.8rem; } }
+    font-size: 4.2rem;
+    font-weight: 400; }
   .heading-primary--sub {
     margin-top: 1.5rem;
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 300; }
-    @media only screen and (max-width: 37.5em) {
-      .heading-primary--sub {
-        font-size: 1rem; } }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 3.6rem;
   font-weight: 400;
   display: inline-block;
   margin-bottom: 3rem; }
-  @media only screen and (max-width: 56.25em) {
-    .heading-secondary {
-      font-size: 3rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .heading-secondary {
-      font-size: 2.5rem; } }
 
 .heading-tertiary {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: 400; }
-  @media only screen and (max-width: 37.5em) {
-    .heading-tertiary {
-      font-size: 3rem;
-      margin-top: 5rem; } }
 
 .paragraph {
   font-size: 1.6rem;
@@ -141,12 +139,6 @@ body {
   color: #fff;
   border: none;
   cursor: pointer; }
-  @media only screen and (max-width: 56.25em) {
-    .btn, .btn:link, .btn:visited {
-      font-size: 1.6rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .btn, .btn:link, .btn:visited {
-      font-size: 1rem; } }
 
 .btn:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -375,6 +367,133 @@ body {
     opacity: 1;
     margin: 0; } }
 
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#619DE3, #D0922B);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media only screen and (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  transition: all .4s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 1.5rem;
+    display: inline-block; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #619DE3;
+  transform: translateX(1rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
 /**
  * _gallery.scss --> Hover Overlay text Effect
  * Grid gallery 
@@ -508,7 +627,7 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 82vw;
-  margin: 4rem auto;
+  margin: 5rem auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
@@ -519,7 +638,7 @@ body {
   flex: 1;
   justify-content: center;
   box-sizing: border-box;
-  margin: 1.8rem;
+  margin: 3rem;
   border: none; }
   @media only screen and (max-width: 56.25em) {
     .card {
@@ -546,12 +665,10 @@ body {
     .card__name:hover {
       border-bottom: 0.1rem solid #333; }
   .card__work {
-    color: #afafaf;
-    font-size: 1.2rem; }
+    color: #afafaf; }
   .card__about {
     color: #afafaf;
-    margin: 1rem 0;
-    font-size: 1rem; }
+    margin: 1rem 0; }
 
 .name-social {
   display: -webkit-box;
@@ -571,7 +688,7 @@ body {
   color: #619DE3; }
 
 .more-link i {
-  font-size: .8rem; }
+  font-size: 1rem; }
 
 /**
  * _footer.scss
@@ -584,8 +701,7 @@ body {
   margin-top: 10rem;
   border-image-source: linear-gradient(to right, #afafaf 0%, #fff 100%);
   border-image-slice: 1;
-  padding: 2.5rem 0;
-  font-size: .8rem;
+  padding: 1rem;
   color: #afafaf; }
   @media only screen and (max-width: 56.25em) {
     .footer {

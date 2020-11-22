@@ -9,8 +9,7 @@
     border-top: .2rem solid transparent;
     margin-top: 10rem;
     @include border-gradient;
-    padding: 2.5rem 0;
-    font-size: .8rem;
+    padding: 1rem;
     color: $color-grey-light;
     
 
@@ -22,11 +21,7 @@
     &__links {
         display: inline-block;
         opacity: 0.8;
-    
-    
     }
-
-
 
     &__copyright {
         display: inline;
@@ -42,7 +37,7 @@
     }
 }
 .footer-link{
-            color: $color-text-link;
+    color: $color-text-link;
 }
 
 .align-el{

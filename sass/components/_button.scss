@@ -22,13 +22,6 @@
         //Change for the <button> element
         border: none;
         cursor: pointer;
-
-        @include respond(tab-port){
-            font-size: $default-font-size;
-        }
-        @include respond(phone){
-            font-size: 1rem;
-        }
     }
     
     &:hover {

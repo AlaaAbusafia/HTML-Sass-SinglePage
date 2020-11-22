@@ -1,9 +1,8 @@
-.cards {
-    
+.cards { 
     display: flex;
     @include flex-wrap-wrap;
     width: 82vw;
-    margin: 4rem auto;
+    margin: 5rem auto;
    @include justify-space-between;
 
    
@@ -15,7 +14,7 @@
     
     justify-content: center;
     box-sizing: border-box;
-    margin: 1.8rem;
+    margin: 3rem;
     border: none;
 
     @include respond(tab-port){
@@ -38,9 +37,6 @@
         @include respond(tab-port){
             width: 80%;
         }
-
-       
-       
        
    }
 
@@ -52,13 +48,13 @@
     }
     &__work{
         color: $color-grey-light;
-        font-size: 1.2rem;
+       
     }
 
     &__about{
         color: $color-grey-light;
         margin: 1rem 0;
-        font-size: 1rem;
+       
     }
 }
 
@@ -75,6 +71,6 @@
 }
 .more-link i{
  
-        font-size: .8rem
+    font-size: 1rem
     
 }
