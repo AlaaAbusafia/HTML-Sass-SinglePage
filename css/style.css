@@ -389,6 +389,9 @@ body {
   grid-template: repeat(7, 5vw)/repeat(8, 1fr);
   grid-gap: 0rem;
   padding: 0rem; }
+  @media only screen and (max-width: 37.5em) {
+    .gallery {
+      display: flex; } }
   .gallery__item {
     display: block;
     position: relative; }
@@ -473,6 +476,12 @@ body {
     -o-transition: all 0.5s linear;
     -ms-transition: all 0.5s linear;
     transition: all 0.5s linear; }
+    @media only screen and (max-width: 56.25em) {
+      .overlay-effect .mask__details {
+        font-size: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .overlay-effect .mask__details {
+        font-size: .8rem; } }
 
 /*.overlay-effect:hover img {
        @include transform-scale-ten;
@@ -534,7 +543,7 @@ body {
       background-color: #333; }
     @media only screen and (max-width: 56.25em) {
       .card__img {
-        width: 70%; } }
+        width: 80%; } }
   .card__name {
     color: #333; }
     .card__name:hover {

@@ -9,6 +9,10 @@
    
     grid-column: full-start / full-end;
 
+    @include respond(phone){
+        display: flex;
+    }
+
     display: grid;
     /*grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(7, 5vw);*/
@@ -95,6 +99,13 @@
         @include transparent;
         @include transform-scale-zero;
         @include transition-all-linear;
+
+        @include respond(tab-port){
+            font-size: 1rem;
+        }
+        @include respond(phone){
+            font-size: .8rem;
+        }
     }
 }
     
@@ -109,9 +120,8 @@
        
         &__details {
         
-       
-       @include absCenter;
-       @include not-transparent;
-       
-    }
+            @include absCenter;
+            @include not-transparent;
+            
+        }
 }
