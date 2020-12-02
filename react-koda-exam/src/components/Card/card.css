@@ -1,0 +1,112 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/**
+ * icons.css
+ *
+ * Icons should convey in a simple and meaningful way the concept of the function
+ * they represent. When designing new icons be sure to remove any complexities 
+ * and follow the linear and lightweight appearance of the icon set.
+ */
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* Font Awesome icons */ }
+  .social__i {
+    background: #fff;
+    border-radius: 50%;
+    border: 0.1rem solid #619DE3;
+    padding: 0rem .1rem;
+    margin: 0 .1rem;
+    color: #619DE3; }
+    .social__i:hover, .social__i:focus {
+      background: #619DE3;
+      color: #fff; }
+
+.cards {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 82vw;
+  margin: 5rem auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.card {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 3rem;
+  border: none; }
+  .card__img {
+    width: 100%;
+    margin: 1rem auto;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding: .5rem; }
+    .card__img:hover {
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      -ms-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out;
+      background-color: #333; }
+  .card__name {
+    color: #333; }
+    .card__name:hover {
+      border-bottom: 0.1rem solid #333; }
+  .card__work {
+    color: #afafaf; }
+  .card__about {
+    color: #afafaf;
+    margin: 1rem 0; }
+
+.name-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.more-link {
+  color: #619DE3; }
+  .more-link:i {
+    font-size: 1rem; }

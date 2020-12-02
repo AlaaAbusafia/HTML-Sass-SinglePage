@@ -1,0 +1,57 @@
+/**
+ * _footer.scss
+ *
+ * Add css for the footer section
+ */
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.footer {
+  font-size: 1.2rem;
+  background-color: #fff;
+  border-top: .2rem solid transparent;
+  margin-top: 10rem;
+  border-image-source: linear-gradient(to right, #afafaf 0%, #fff 100%);
+  border-image-slice: 1;
+  padding: 2rem;
+  color: #afafaf; }
+  .footer__links {
+    display: inline-block; }
+    .footer__links a:hover,
+    .footer__links a:focus {
+      color: #619DE3;
+      text-decoration: underline; }
+  .footer__copyright {
+    display: inline;
+    margin-right: 3rem; }
+
+.footer-content {
+  width: 80vw;
+  margin: auto; }
+  @media only screen and (max-width: 37.5em) {
+    .footer-content {
+      padding: 0; } }
+
+.footer-link {
+  color: #ABB3A6; }
+
+.align-el {
+  position: absolute;
+  right: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .align-el {
+      right: 0rem; } }

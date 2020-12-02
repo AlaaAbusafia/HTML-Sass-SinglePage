@@ -1,0 +1,35 @@
+/**
+ * icons.css
+ *
+ * Icons should convey in a simple and meaningful way the concept of the function
+ * they represent. When designing new icons be sure to remove any complexities 
+ * and follow the linear and lightweight appearance of the icon set.
+ */
+ 
+
+.social {
+  @include display-flex;
+  @include flex-direction-row;
+  @include flex-wrap-wrap;
+  @include justify-space-between;
+  @include align-items-center;
+  
+
+
+    /* Font Awesome icons */
+    &__i {
+      
+      background: $color-white;
+      border-radius: 50%;
+      border: .1rem solid $color-primary;
+      padding: 0rem .1rem;
+      margin: 0 .1rem;
+      color: $color-primary;
+      
+      &:hover, &:focus {
+      background: $color-primary;;
+      color: #fff;
+    }
+ }
+}
+

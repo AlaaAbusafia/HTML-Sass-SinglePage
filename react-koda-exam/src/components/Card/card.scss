@@ -1,0 +1,73 @@
+@import '../../sass/abstracts/mixins';
+@import '../../sass/abstracts/variables';
+@import '../../sass/components/icons';
+
+.cards { 
+    display: flex;
+    @include flex-wrap-wrap;
+    width: 82vw;
+    margin: 5rem auto;
+   @include justify-space-between;
+   
+}
+ 
+.card {
+   
+    @include flex-one;
+    
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 3rem;
+    border: none;
+
+
+    &__img{
+        width: 100%;
+        margin: 1rem auto;
+        border-radius: 50%;
+        border: 1px solid $color-grey-dark;
+        background-color: $color-white;
+        padding: .5rem;
+
+        &:hover{
+            @include transition-all-easeInOut;
+            background-color: $color-grey-dark;
+        }
+
+        
+       
+   }
+
+    &__name{
+        color: $color-grey-dark;
+        &:hover{
+            border-bottom: .1rem solid $color-grey-dark;
+        }
+    }
+    &__work{
+        color: $color-grey-light;
+       
+    }
+
+    &__about{
+        color: $color-grey-light;
+        margin: 1rem 0;
+       
+    }
+}
+
+.name-social{
+    @include display-flex;
+    @include flex-direction-row;
+    @include flex-wrap-wrap;
+    @include justify-space-between;
+}
+.more-link{
+    color: $color-primary;
+
+    &:i{
+ 
+    font-size: 1rem
+    }
+    
+}

@@ -1,0 +1,58 @@
+/**
+ * _footer.scss
+ *
+ * Add css for the footer section
+ */
+
+ @import '../../sass/abstracts/mixins';
+@import '../../sass/abstracts/variables';
+
+.footer {
+    font-size: 1.2rem;
+    background-color: $color-white;
+    border-top: .2rem solid transparent;
+    margin-top: 10rem;
+    @include border-gradient;
+    padding: 2rem;
+    color: $color-grey-light;
+    
+
+    &__links {
+        display: inline-block;
+
+        & a:hover,
+        & a:focus{
+            color: $color-primary;
+            text-decoration: underline;
+        }
+       
+    }
+
+    &__copyright {
+        display: inline;
+        margin-right: 3rem;
+    }
+}
+
+.footer-content{
+    width: 80vw;
+    margin: auto;
+
+    @include respond(phone) {
+        padding:  0;
+    }
+}
+.footer-link{
+    color: $color-text-link;
+}
+
+.align-el{
+    
+    position: absolute;
+    right: 10rem;
+
+
+     @include respond(phone) {
+        right: 0rem;
+    }
+}
