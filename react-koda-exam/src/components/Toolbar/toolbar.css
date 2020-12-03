@@ -1,0 +1,39 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.nav-bg-respond {
+  text-align: center; }
+
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+  top: 1.5rem;
+  margin-right: .5rem; }
+
+.navbar {
+  top: 0;
+  right: 0;
+  z-index: 1500; }
+  .navbar button {
+    position: absolute;
+    right: 0;
+    z-index: 1500; }
+
+.nav {
+  font-size: 1.6rem; }
+  .nav-item {
+    margin: 0 1rem; }

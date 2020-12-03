@@ -1,0 +1,16 @@
+ @import './../../sass/abstracts/mixins';
+
+.koda-logo{
+    
+    & img{
+        height: 5.6rem;
+
+        @include respond(phone){
+            height: 4rem;
+        }
+    }
+
+    &:hover{
+        transition: all .9s;
+    }
+}

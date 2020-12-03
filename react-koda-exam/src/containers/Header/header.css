@@ -84,6 +84,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   color: #fff;
   border: none;
   cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 1.5rem; } }
 
 .btn:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -164,7 +167,3 @@ ORDER: Base + typography > general layout + grid > page layout > components
   100% {
     opacity: 1;
     margin: 0; } }
-
-.koda-logo img {
-  width: 25vw;
-  height: 80%; }
