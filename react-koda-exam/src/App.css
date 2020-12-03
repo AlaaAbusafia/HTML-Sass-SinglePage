@@ -67,3 +67,14 @@ body {
 ::selection {
   background-color: #F9F9F9;
   color: #333; }
+
+.App {
+  margin: 0;
+  padding: 0; }
+
+.section-about {
+  background-color: #fff;
+  padding: 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .section-about {
+      padding: 5rem; } }

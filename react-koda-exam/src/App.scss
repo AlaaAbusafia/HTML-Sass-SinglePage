@@ -7,3 +7,18 @@
 @import './sass/abstracts/mixins';
 @import './sass/abstracts/variables';
 @import './sass/base/base';
+
+
+ .App {
+    margin: 0;
+    padding: 0;
+}
+.section-about {
+    background-color: $color-white;
+    padding: 10rem;
+
+
+    @include respond(phone) {
+        padding: 5rem;
+    }
+}
