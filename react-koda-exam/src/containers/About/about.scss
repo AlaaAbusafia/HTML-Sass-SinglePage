@@ -1,0 +1,14 @@
+
+@import './../../sass/abstracts/mixins';
+@import './../../sass/abstracts/variables';
+
+
+
+.paragraph {
+    margin-bottom: 3rem;
+}
+.sec-color{
+    color: $color-secondary;
+    font-size: 1.2rem;
+
+}

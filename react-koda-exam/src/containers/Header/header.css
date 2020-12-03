@@ -1,0 +1,170 @@
+/**
+ * _header.scss 
+ * 
+ *
+ */
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/**
+ * _typography.scss --> change the typography of html elements
+ * 
+ *
+ */
+.heading-primary {
+  color: #fff;
+  text-transform: capitalize;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 4.2rem;
+    font-weight: 400; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 2rem; } }
+  .heading-primary--sub {
+    margin-top: 1.5rem;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 300; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1rem; } }
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      margin-top: 4rem; } }
+
+.heading-tertiary {
+  font-size: 2.5rem;
+  font-weight: 400; }
+
+.paragraph {
+  font-size: 1.6rem;
+  color: #afafaf;
+  font-weight: 300; }
+
+.align-right {
+  text-align: right; }
+
+/**
+ * _button.scss
+ *
+ */
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5rem 2rem;
+  display: inline-block;
+  border-radius: .3rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 2rem;
+  background-color: #619DE3;
+  color: #fff;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  color: #333; }
+  .btn:hover::after {
+    transform: scaleX(1.6) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--blue {
+  color: #333; }
+  .btn--blue::after {
+    background-color: #619DE3; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .9s; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #ABB3A6;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  border-bottom: 1px solid #619DE3;
+  color: #619DE3;
+  transform: translateY(-3px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
+
+.btn-text i {
+  color: #D0922B; }
+
+.header {
+  height: 100vh;
+  background-image: url(./../../_assets/banner1.jpg);
+  background-size: cover;
+  background-position: top;
+  animation: 1s fadein 0.5s forwards;
+  opacity: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
+
+@keyframes fadein {
+  100% {
+    opacity: 1; } }
+  .header__text-box {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    animation: 1s slidefade 1s forwards; }
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0; } }
+
+.koda-logo img {
+  width: 25vw;
+  height: 80%; }

@@ -1,0 +1,61 @@
+
+/**
+ * _header.scss 
+ * 
+ *
+ */
+
+@import './../../sass/abstracts/mixins';
+@import './../../sass/abstracts/variables';
+@import './../../sass/base/typography';
+@import './../../sass/components/button';
+
+.header {
+    height: 100vh;
+    background-image: url(./../../_assets/banner1.jpg);
+    background-size: cover;
+    background-position: top;
+    animation: 1s fadein 0.5s forwards;
+    opacity: 0;
+    
+    @include respond(phone){
+        @include justify-space-between;
+    }
+
+    @keyframes fadein {
+        100%{
+            opacity: 1;
+        }
+    }
+   
+    
+    &__text-box {
+        position: absolute;
+        
+        @include absCenter;
+        text-align: center;
+        opacity: 0;
+        
+        animation: 1s slidefade 1s forwards ;
+
+        @keyframes slidefade {
+            100%{
+                opacity: 1;
+                margin: 0;
+            }
+            
+        }
+        
+    }
+}
+
+.koda-logo{
+
+    & img{
+        width: 25vw;
+        height: 80%;
+    }
+}
+
+
+

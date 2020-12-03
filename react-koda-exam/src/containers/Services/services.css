@@ -1,0 +1,145 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+/*
+* colored-blocks with hover effect, 
+* each block has its own background color and 
+* when hover the background color slides to cover the whole block
+*
+**/
+.bg-grey {
+  background-color: #F9F9F9; }
+
+.bg-red {
+  background-color: #FBF0EE; }
+
+.bg-bright-green {
+  background-color: #FDF5F2; }
+
+.bg-blue {
+  background-color: #f7f7fe; }
+
+.bg-green {
+  background-color: #EDEDED; }
+
+.bg-gold {
+  background-color: #FCF5EB; }
+
+.bg-grey-light {
+  background-color: #afafaf; }
+
+.bg-red-dark {
+  background-color: #DF614A; }
+
+.bg-brightgreen-dark {
+  background-color: #B3D330; }
+
+.bg-blue-dark {
+  background-color: #2185E3; }
+
+.bg-green-dark {
+  background-color: #038072; }
+
+.bg-gold-dark {
+  background-color: #D0922B; }
+
+.p-container {
+  display: flex;
+  align-content: flex-start;
+  justify-items: flex-end;
+  margin: 0 auto; }
+  @media only screen and (max-width: 37.5em) {
+    .p-container {
+      margin: -.2rem auto 0 auto; } }
+  .p-container--grey {
+    background: linear-gradient(to right, #afafaf 30%, #F9F9F9 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--red {
+    background: linear-gradient(to right, #DF614A 30%, #FBF0EE 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--green {
+    background: linear-gradient(to right, #038072 30%, #EDEDED 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--brightgreen {
+    background: linear-gradient(to right, #B3D330 30%, #FDF5F2 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--blue {
+    background: linear-gradient(to right, #2185E3 30%, #f7f7fe 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container--gold {
+    background: linear-gradient(to right, #D0922B 30%, #FCF5EB 70%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out; }
+  .p-container:hover {
+    /* "to left" / "to right" - affects initial color */
+    background-position: left bottom; }
+
+.services__block {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300; }
+  @media only screen and (max-width: 61.9em) {
+    .services__block {
+      font-size: 1.6rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .services__block {
+      font-size: 1rem; } }
+
+.services__block p {
+  display: inline;
+  padding: 1.5rem 2.8rem 1.5rem 0;
+  margin: 0 0 0 -1.8rem;
+  text-align: left; }
+  @media only screen and (max-width: 61.9em) {
+    .services__block p {
+      margin: 0;
+      padding: 1.5rem 2.5rem; } }

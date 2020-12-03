@@ -18,6 +18,9 @@ class Layout extends Component {
                     <About />
                 </section>
                 <Services />
+                <section class="section-about" id="about">
+                    <About />
+                </section>
                 <section className="cards" id="team">
                     <Card />
                     <Card />
