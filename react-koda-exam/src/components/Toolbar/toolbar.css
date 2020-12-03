@@ -32,8 +32,3 @@ ORDER: Base + typography > general layout + grid > page layout > components
     position: absolute;
     right: 0;
     z-index: 1500; }
-
-.nav {
-  font-size: 1.6rem; }
-  .nav-item {
-    margin: 0 1rem; }

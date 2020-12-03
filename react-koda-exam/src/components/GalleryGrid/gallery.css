@@ -1,0 +1,147 @@
+/**
+ * _gallery.scss --> Hover Overlay text Effect
+ * Grid gallery 
+ * 
+ *
+ */
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.gallery {
+  grid-column: full-start / full-end;
+  display: grid;
+  /*grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);*/
+  grid-template: repeat(7, 5vw)/repeat(8, 1fr);
+  grid-gap: 0rem;
+  padding: 0rem; }
+  @media only screen and (max-width: 37.5em) {
+    .gallery {
+      display: block; } }
+  .gallery__item {
+    display: block;
+    position: relative; }
+    .gallery__item:nth-child(1) {
+      grid-row: 1 / span 5;
+      grid-column: 1 / span 2; }
+    .gallery__item:nth-child(2) {
+      grid-row: 1 / span 5;
+      grid-column: 3 / span 3; }
+    .gallery__item:nth-child(3) {
+      grid-row: 1 / span 5;
+      grid-column: 6 / span 3; }
+    .gallery__item:nth-child(4) {
+      grid-row: 5 / span 4;
+      grid-column: 1 / span 2; }
+    .gallery__item:nth-child(5) {
+      grid-row: 5 / span 4;
+      grid-column: 3 / span 3; }
+    .gallery__item:nth-child(6) {
+      grid-row: 5 / span 4;
+      grid-column: 6 / span 3; }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; }
+
+.mask {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  text-align: left; }
+  .mask__date {
+    opacity: .5;
+    display: block; }
+
+.overlay-effect img {
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out; }
+
+.overlay-effect .mask {
+  background-color: #df614a;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  /* Theoretically for IE 8 & 9 (more valid) */
+  /* ...but not required as filter works too */
+  /* should come BEFORE filter */
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0; }
+  .overlay-effect .mask__details {
+    /* Theoretically for IE 8 & 9 (more valid) */
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+    @media only screen and (max-width: 61.9em) {
+      .overlay-effect .mask__details {
+        font-size: 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .overlay-effect .mask__details {
+        font-size: .8rem; } }
+
+/*.overlay-effect:hover img {
+       @include transform-scale-ten;
+       @include transparent;
+    }*/
+.overlay-effect:hover .mask {
+  /* Theoretically for IE 8 & 9 (more valid) */
+  /* ...but not required as filter works too */
+  /* should come BEFORE filter */
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1; }
+  .overlay-effect:hover .mask__details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Theoretically for IE 8 & 9 (more valid) */
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1; }

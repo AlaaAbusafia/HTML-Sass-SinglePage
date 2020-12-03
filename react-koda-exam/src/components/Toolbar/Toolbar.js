@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 //import NavigationItems from '../NavigationItems/navigationItems';
 import './toolbar.css';
-import Logo from '../../Logo/Logo';
+import Logo from '../Logo/Logo';
 
 
 const toolbar = ( props ) => (

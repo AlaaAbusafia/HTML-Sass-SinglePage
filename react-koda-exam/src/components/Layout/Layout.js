@@ -3,8 +3,11 @@ import Header from '../../containers/Header/header';
 import About from '../../containers/About/about';
 import Services from '../../containers/Services/services';
 import Careers from '../../containers/Careers/careers';
+import GalleryGrid from './../GalleryGrid/GalleryGrid';
 import Card from '../../components/Card/card';
 import Footer from '../../containers/Footer/footer';
+
+
 
 
 
@@ -22,7 +25,7 @@ class Layout extends Component {
                 <section class="section-about" id="about">
                     <Careers />
                 </section>
-               
+               <GalleryGrid />,
                 <section className="cards" id="team">
                     <Card />
                     <Card />

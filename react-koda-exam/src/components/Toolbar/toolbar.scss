@@ -1,6 +1,6 @@
 
- @import './../../../sass/abstracts/mixins';
-@import './../../../sass/abstracts/variables';
+ @import './../../sass/abstracts/mixins';
+@import './../../sass/abstracts/variables';
 
 .nav-bg-respond{
     text-align: center;
@@ -30,13 +30,3 @@
   }
 }
 
-
-.nav{
-    font-size: $default-font-size;
-    
-    &-item{
-        margin: 0 1rem;
-    }
-
-
-  }
