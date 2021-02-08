@@ -1,2 +1,2 @@
-# koda-exam
-static single page that reproduces the design as a mobile ready page. 
+# single page
+A psd design has been reproduced into static single page using reactjs
