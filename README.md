@@ -1,4 +1,4 @@
-# koda-exam
+# static single page example
 Static single page that reproduces the design as a mobile ready page. 
 The page has been built with HTML, HTML5, CSS,CSS3 and CSS preprocessor (Sass).
 And it extended with package manager.
