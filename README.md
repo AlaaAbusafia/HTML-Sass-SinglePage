@@ -1,3 +1,4 @@
 # single page
-A psd design has been conveerted into static single page using html, css, sass
+A psd design has been converted into static single page using html, css, sass, and React.
+
 
